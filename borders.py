@@ -23,6 +23,14 @@ for i in range(casesno):
     thecaseinfo=input().split(" ")
     thecase=[]
     for v in range(int(thecaseinfo[0])):
-        thecase.append(input())
+        a=list(set(input().split(".")))
+        a.pop(0)
+        if a!=[]: 
+            l=len(a[0])
+        else:
+            l=0
+        thecase.append(l)
     cases.append(thecase)
-    
+
+for i in cases:
+    print(max(i))
